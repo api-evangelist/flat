@@ -1,0 +1,682 @@
+{
+    "id": "9cc71266b2853d5391f0e1e0ad305815",
+    "name": "Flat",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "887203111cad80c5712d82042b1617ad",
+            "name": "List group's scores",
+            "url": "httpsapi.flat.io\/v2\/groups\/{group}\/scores",
+            "description": "Get the list of scores shared with a group.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "group",
+                    "description": "Unique identifier of the group",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "parent",
+                    "description": "Filter the score forked from the score id `parent`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "e39374d3eff3594c49cca8f812d74222",
+            "name": "Get current user profile",
+            "url": "httpsapi.flat.io\/v2\/me",
+            "description": "Get details about the current authenticated User.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "992fcd1fb24a663607c6009103b0aeb6",
+            "name": "Create a new score",
+            "url": "httpsapi.flat.io\/v2\/scores",
+            "description": "Use this API method to **create a new music score in the current User account**. You will need a MusicXML 3 (`vnd.recordare.musicxml` or `vnd.recordare.musicxml+xml`) or a MIDI (`audio\/midi`) file to create the new Flat document.\n\nThis API call will automatically create the first revision of the document, the score can be modified by the using our web application or by uploading a new revision of this file (`POST \/v2\/scores\/{score}\/revisions\/{revision}`).\n\nThe currently authenticated user will b",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "bfc7dc85b0b50677d4d2123b408602ce",
+            "name": "Delete a score",
+            "url": "httpsapi.flat.io\/v2\/scores\/{score}",
+            "description": "This API call will schedule the deletion of the score, its revisions, and whole history.\nThe user calling this API method must have the `aclAdmin` rights on this document to process this action.\nThe score won't be accessible anymore after calling this method and the user's quota will directly be updated.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "ce6f694f65e822221c737ae1f1fa0135",
+            "name": "Get a score's metadata",
+            "url": "httpsapi.flat.io\/v2\/scores\/{score}",
+            "description": "Get the details of a score identified by the `score` parameter in the URL.\nThe currently authenticated user must have at least a read access to the document to use this API call.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "0be2c797cd3ef1eff48486c2b2d104da",
+            "name": "Edit a score's metadata",
+            "url": "httpsapi.flat.io\/v2\/scores\/{score}",
+            "description": "This API method allows you to change the metadata of a score document (e.g. its `title` or `privacy`), all the properties are optional.\n\nTo edit the file itself, create a new revision using the appropriate method (`POST \/v2\/scores\/{score}\/revisions\/{revision}`).\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "bbf8b39972b9cc47d940115ac79f586b",
+            "name": "List the collaborators",
+            "url": "httpsapi.flat.io\/v2\/scores\/{score}\/collaborators",
+            "description": "This API call will list the different collaborators of a score and their rights on the document. The returned list will at least contain the owner of the document.\n\nCollaborators can be a single user (the object `user` will be populated) or a group (the object `group` will be populated).\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "1af54e5d65d64cab451eaa79e99232e5",
+            "name": "Add a new collaborator",
+            "url": "httpsapi.flat.io\/v2\/scores\/{score}\/collaborators",
+            "description": "Share a score with a single user or a group. This API call allows to add, invite and update the collaborators of a document.\n- To add an existing Flat user to the document, specify its unique identifier in the `user` property.\n- To invite an external user to the document, specify its email in the `userEmail` property.\n- To add a Flat group to the document, specify its unique identifier in the `group` property.\n- To update an existing collaborator, process the same request with different rights.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "a19d90f6036501e071604c47de5d797f",
+            "name": "Delete a collaborator",
+            "url": "httpsapi.flat.io\/v2\/scores\/{score}\/collaborators\/{collaborator}",
+            "description": "Remove the specified collaborator from the score\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "739a97b1af7823fa0988316cb65dd685",
+            "name": "Get a collaborator",
+            "url": "httpsapi.flat.io\/v2\/scores\/{score}\/collaborators\/{collaborator}",
+            "description": "Get the information about a collaborator (User or Group).\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "2608993933663f351736615aa0b5534e",
+            "name": "List comments",
+            "url": "httpsapi.flat.io\/v2\/scores\/{score}\/comments",
+            "description": "This method lists the different comments added on a music score (documents and inline) sorted by their post dates.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "51276f31338d34fb95d20747c7f79bc3",
+            "name": "Post a new comment",
+            "url": "httpsapi.flat.io\/v2\/scores\/{score}\/comments",
+            "description": "Post a document or a contextualized comment on a document.\n\nPlease note that this method includes an anti-spam system for public scores. We don't guarantee that your comments will be accepted and displayed to end-user. Comments are be blocked by returning a `403` HTTP error and hidden from other users when the `spam` property is `true`.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "b2627d1c5b2540780ca15924b296cc94",
+            "name": "Delete a comment",
+            "url": "httpsapi.flat.io\/v2\/scores\/{score}\/comments\/{comment}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "798a7fcd17a4b73fe4f8cddbc7258b3b",
+            "name": "Update an existing comment",
+            "url": "httpsapi.flat.io\/v2\/scores\/{score}\/comments\/{comment}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "c4d3d9481cae6f5fe924415abc99f7e3",
+            "name": "Mark the comment as unresolved",
+            "url": "httpsapi.flat.io\/v2\/scores\/{score}\/comments\/{comment}\/resolved",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "f525a1cb8ce88d696392242f36cee962",
+            "name": "Mark the comment as resolved",
+            "url": "httpsapi.flat.io\/v2\/scores\/{score}\/comments\/{comment}\/resolved",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "a2f3fa23ce0e348f5a553a3c4d4be9fd",
+            "name": "Fork a score",
+            "url": "httpsapi.flat.io\/v2\/scores\/{score}\/fork",
+            "description": "This API call will make a copy of the last revision of the specified score and create a new score. The copy of the score will have a privacy set to `private`.\n\nWhen using a [Flat for Education](https:\/\/flat.io\/edu) account, the inline and contextualized comments will be accessible in the child document.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "58fe80a4a6fdd683353307678af79ec2",
+            "name": "List the revisions",
+            "url": "httpsapi.flat.io\/v2\/scores\/{score}\/revisions",
+            "description": "When creating a score or saving a new version of a score, a revision is created in our storage. This method allows you to list all of them, sorted by last modification.\n\nDepending the plan of the account, this list can be trunked to the few last revisions.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "f849b16cef063e81ddd6afc74e4a53d1",
+            "name": "Create a new revision",
+            "url": "httpsapi.flat.io\/v2\/scores\/{score}\/revisions",
+            "description": "Update a score by uploading a new revision for this one.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "58a41c2a1835d237d4f845e8d879141a",
+            "name": "Get a score revision",
+            "url": "httpsapi.flat.io\/v2\/scores\/{score}\/revisions\/{revision}",
+            "description": "When creating a score or saving a new version of a score, a revision is created in our storage. This method allows you to get a specific\nrevision metadata.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "44aeb92bb23216c5d727fb7385bc47f1",
+            "name": "Get a score revision data",
+            "url": "httpsapi.flat.io\/v2\/scores\/{score}\/revisions\/{revision}\/{format}",
+            "description": "Retrieve the file corresponding to a score revision (the following formats are available: Flat JSON\/Adagio JSON `json`, MusicXML\n`mxl`\/`xml`, MP3 `mp3`, WAV `wav`, MIDI `midi`, or a tumbnail of the first page `thumbnail.png`).\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "format",
+                    "description": "The format of the file you will retrieve",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "onlyCached",
+                    "description": "Only return files already generated and cached in Flat's production\ncache. If the file is not availabe, a 404 will be returned\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "parts",
+                    "description": "An optional a set of parts to be exported. This parameter must be\nspecified with a list of integers. For example \"1,2,5\".\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "6d99b97384ca3d61ae8a09987ef4d508",
+            "name": "Get a public user profile",
+            "url": "httpsapi.flat.io\/v2\/users\/{user}",
+            "description": "Get a public profile of a Flat User.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "This route parameter is the unique identifier of the user. You can specify an email instead of an unique identifier. If you are executing this request authenticated, you can use `me` as a value instead of the current User unique identifier to work on the current authenticated user.\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "8f24f77d5768ad51422e1b493c1510e2",
+            "name": "List liked scores",
+            "url": "httpsapi.flat.io\/v2\/users\/{user}\/likes",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ids",
+                    "description": "Return only the identifiers of the scores",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        },
+        {
+            "id": "e263acc55287a8e2d77b91c95e00b41a",
+            "name": "List user's scores",
+            "url": "httpsapi.flat.io\/v2\/users\/{user}\/scores",
+            "description": "Get the list of scores owned by the User\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "parent",
+                    "description": "Filter the score forked from the score id `parent`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9cc71266b2853d5391f0e1e0ad305815",
+            "rawModeData": ""
+        }
+    ]
+}
