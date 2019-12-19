@@ -1,0 +1,104 @@
+{
+    "name": "Flat",
+    "description": "<p>Whether you're a beginner or a professional composer, our user-friendly music composition software gives you all the tools that you need to make your own sheet music. You can write, listen, share and discover music scores right in your web browser on any device<\/p>",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/flat-logo.png",
+    "tags": [
+        "api provider",
+        "general data",
+        "have api",
+        "have swagger",
+        "music",
+        "relative data"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flat\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Flat",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/flat-logo.png",
+            "humanURL": "http:\/\/flat.io",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/flat.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/flat-openapi.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Developers",
+            "url": "https:\/\/flat.io\/developers"
+        },
+        {
+            "type": "Embeddable",
+            "url": "https:\/\/flat.io\/developers\/embed"
+        },
+        {
+            "type": "Github",
+            "url": "https:\/\/github.com\/FlatIO"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28580-2019-09-03-18-33-43.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28580-2019-09-02-21-59-00.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28580-2019-09-03-18-33-53.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28580-2019-09-03-08-45-01.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28580-2019-09-03-08-46-00.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28580-2019-09-02-21-55-09.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28580-2019-09-02-21-55-24.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28580-2019-09-02-21-55-38.json"
+        },
+        {
+            "type": "Pricing",
+            "url": "https:\/\/flat.io\/pricing"
+        },
+        {
+            "type": "Privacy Policy",
+            "url": "https:\/\/flat.io\/help\/en\/policies\/#coppa-and-ferpa-compliance"
+        },
+        {
+            "type": "Support",
+            "url": "https:\/\/flat.io\/help"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/flat_io"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/flat.io"
+        }
+    ]
+}
