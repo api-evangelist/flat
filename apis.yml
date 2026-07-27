@@ -1,7 +1,27 @@
 aid: flat
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/flat.png
 name: Flat
-description: Flat is a company surfaced as a portfolio company of 500-global, anthemis and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: 'Flat (now operating as Clau) is a Mexican proptech real-estate marketplace
+  and financial-services platform backed by 500 Global and Anthemis. Clau lets people
+  buy and rent apartments and houses across major Mexican cities including Mexico City,
+  Guadalajara, Monterrey, and Queretaro, and originates mortgage credit (Cofinavit,
+  construction, land-purchase, and liquidity loans). It also offers property valuations,
+  a price-map database, renovation services, and seller listing tools, alongside "El
+  Living", its real-estate education blog. The company is consumer-facing and does
+  not currently publish a public developer API; this profile was surfaced from the
+  500 Global and Anthemis portfolios and enriched with domain-security and identity
+  signals.'
 url: https://raw.githubusercontent.com/api-evangelist/flat/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,9 +32,15 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Real Estate
+- Proptech
+- Fintech
+- Mortgages
+- Marketplace
+- Mexico
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -22,5 +48,20 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/flat-domain-security.yml
 - type: Website
   url: https://clau.com
+- type: Blog
+  url: https://www.clau.com/elliving
+- type: Support
+  url: https://www.clau.com/preguntas-frecuentes
+- type: PrivacyPolicy
+  url: https://www.clau.com/aviso-de-privacidad
+- type: TermsOfService
+  url: https://www.clau.com/docs/Terminos_y_condiciones_clau_web.pdf
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
